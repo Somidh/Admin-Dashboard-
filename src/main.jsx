@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from 'react-dom'
 import App from './App'
+import { ContextProvider } from "./context/ContextProvider";
 import './index.css'
 
 // ReactDOM.createRoot(document.getElementById('root')).render(
@@ -8,4 +9,11 @@ import './index.css'
 //       <App />
 //     </React.StrictMode>
 //   )
-ReactDOM.render(<App />, document.getElementById('root'))  
+
+
+ReactDOM.render(
+    <ContextProvider>
+        <App />
+    </ContextProvider>,
+    document.getElementById('root')
+)  
